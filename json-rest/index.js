@@ -37,7 +37,7 @@ app.delete("/user/:id", (req, res)=>{
 app.put("/user/:id", (req, res)=>{
     let { age, name } = req.body;
     let { id } = req.params;
-    let user = data.find(user => user.id = id);
+    let user = data.find(user => user.id == id);
     if(user) {
         user.id = id;
         user.age = age;
