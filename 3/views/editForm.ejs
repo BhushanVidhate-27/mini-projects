@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit form</title>
+</head>
+<body>
+    <form action="/msg/<%= id %>?_method=PATCH" method="post">
+        <input type="text" name="newmessage" id="<%= id %>" placeholder="edit message">
+        <button type="submit">Change msg</button>
+    </form>
+</body>
+</html>

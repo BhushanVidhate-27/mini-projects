@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Single Chat</title>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <%= me === data[0].sender ? data[0].receiver : data[0].sender %>
+        </div>
+
+        <% data.forEach(ele => { %>
+            <div class="message-card <%= ele.sender === me ? 'my-message' : 'other-message' %>">
+            <div class="message-text">
+                <%= ele.message %>
+            </div>
+            <div class="message-time">
+                <%= ele.date %>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Close To wa Personal</title>
+</head>
+<body>
+    <div class="chat-list">
+        <p class="user-name">me = <%= me %></p>
+        <% for(let el of data){ %>
+        <div class="chat-item">
+            <div class="chat-name"><%= el._id %></div>
+            <form class="chat-form" action="/msg/<%= me %>/<%= el._id %>" method="get">
+                <input class="hidden-user" type="hidden" name="me" value="<%= me %>">
+                <button class="chat-btn">View Chat</button>
+            </form>
+        </div>
+        <% } %>
+    </div>
+</body>
+</html>

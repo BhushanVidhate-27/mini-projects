@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>All Messages</title>
+</head>
+<body>
+    <div id="allChats">
+        <center><h3> messages for "all" %> </h3></center>
+        <br><br>
+        <% for(let el of data) { %>
+            <div class="chat">
+                <div class="name">
+                    <%= me === el.sender ? el.receiver : el.sender %> 
+                </div>
+                <div class="dateTime">
+                    <%= new Date(el.date).toLocaleString() %>
+                </div>
+                <div class="msg">
+                    <%= el.message %>
+                </div>
+                <form action="/msg/<%= el._id %>/edit">
+                    <button style="display:inline-block; background: #ffffff;color: brown; border: none;">Edit msg</button>
+                </form>
+                <form action="/msg/<%= el._id %>?_method=DELETE" method="post">
+                    <button style="height: 50px; background: #ffffff;color: brown; border: none;">delete msg</button>
+                </form>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
