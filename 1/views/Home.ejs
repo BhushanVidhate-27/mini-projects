@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Home File</title>
+</head>
+<body>
+    <h1 id="simpHead">Hi you are on all users page</h1>
+    <% data.forEach(a => { %>
+        <h3>Name : <%= a.name; %> </h3>
+        <h3>Id: <%= a.id; %> </h3>
+        <h3>Age: <%= a.age; %> </h3>
+        <form action="/user/<%= a.id %>/Edit" method="post" ><button>Edit</button></form>
+        <form action="/user/<%= a.id %>?_method=DELETE" method="post"><button>Delete</button></form>
+    <% }) %>
+</body>
+</html>

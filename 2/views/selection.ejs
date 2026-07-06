@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection</title>
+</head>
+<body>
+<link rel="stylesheet" href="/css/style.css">
+
+<div class="container">
+    <h1>Manage Notes</h1>
+
+    <form method="post">
+
+        <% for(file of files){ %>
+
+            <label class="radio-card">
+                <input
+                    type="radio"
+                    name="fileName"
+                    value="<%= file %>"
+                >
+                <%= file %>
+            </label>
+
+        <% } %>
+
+        <div class="actions">
+            <button formaction="/update" formmethod="get">
+                Update
+            </button>
+
+            <button formaction="/delete">
+                Delete
+            </button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

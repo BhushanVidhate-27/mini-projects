@@ -1,0 +1,1 @@
+This folder implements the basic REST operations using a json file instead of database.
