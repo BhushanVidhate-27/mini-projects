@@ -15,13 +15,13 @@ read -p "Enter your choice (1-3): " choice
 
 case $choice in
     1)
-        PROJECT="1-json-rest"
+        PROJECT="json-rest"
         ;;
     2)
-        PROJECT="2-fs-rest"
+        PROJECT="fs-rest"
         ;;
     3)
-        PROJECT="3-mongoose-rest"
+        PROJECT="mongoose-rest"
         ;;
     *)
         echo "Invalid choice!"
