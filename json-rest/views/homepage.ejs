@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON REST API</title>
+</head>
+<body>
+
+    <h1>JSON REST API</h1>
+    <p>Select a route to explore:</p>
+
+    <ul>
+        <li>
+            <strong>GET /</strong><br>
+            <a href="http://localhost:8080/">
+                http://localhost:8080/
+            </a>
+            <br>
+            Home page
+        </li>
+
+        <br>
+
+        <li>
+            <strong>GET /user</strong><br>
+            <a href="http://localhost:8080/user">
+                http://localhost:8080/user
+            </a>
+            <br>
+            Display all users
+        </li>
+
+        <br>
+
+        <li>
+            <strong>POST /user/:id/Edit</strong><br>
+            Example:
+            <code>http://localhost:8080/user/1/Edit</code>
+            <br>
+            Opens the edit form for a user.
+        </li>
+
+        <br>
+
+        <li>
+            <strong>PUT /user/:id</strong><br>
+            Example:
+            <code>http://localhost:8080/user/1</code>
+            <br>
+            Updates the selected user.
+        </li>
+
+        <br>
+
+        <li>
+            <strong>DELETE /user/:id</strong><br>
+            Example:
+            <code>http://localhost:8080/user/1</code>
+            <br>
+            Deletes the selected user.
+        </li>
+    </ul>
+
+    <hr>
+
+    <p>
+        <strong>Note:</strong> Only <code>GET</code> routes can be opened directly
+        in a browser. The <code>POST</code>, <code>PUT</code>, and
+        <code>DELETE</code> routes are triggered through forms inside the
+        application.
+    </p>
+
+</body>
+</html>

@@ -16,7 +16,40 @@ read -p "Enter your choice (1-3): " choice
 case $choice in
     1) PROJECT="json-rest" ;;
     2) PROJECT="fs-rest" ;;
-    3) PROJECT="mongoose-rest" ;;
+    3)
+    PROJECT="mongoose-rest"
+
+    echo
+    echo "Checking MongoDB..."
+
+    if ! command -v mongod >/dev/null 2>&1; then
+        echo "MongoDB is not installed."
+        echo
+        echo "Download it from:"
+        echo "https://www.mongodb.com/try/download/community"
+        exit 1
+    fi
+
+    if ! nc -z localhost 27017 >/dev/null 2>&1; then
+        echo "MongoDB is installed but not running."
+        echo
+
+        if [[ "$OSTYPE" == "darwin"* ]]; then
+            echo "Run:"
+            echo "brew services start mongodb-community"
+        elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+            echo "Run:"
+            echo "sudo systemctl start mongod"
+        elif command -v powershell.exe >/dev/null 2>&1; then
+            echo "Run (PowerShell as Administrator):"
+            echo "net start MongoDB"
+        fi
+
+        exit 1
+    fi
+
+    echo "MongoDB is running."
+    ;;
     *) echo "Invalid choice!"; exit 1 ;;
 esac
 

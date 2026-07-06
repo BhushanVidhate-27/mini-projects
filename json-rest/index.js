@@ -17,7 +17,7 @@ app.set("view engine", "ejs");
 //
 
 app.get("/", (req, res)=>{// gets all users
-    res.send("This is homepage");
+    res.render("homepage.ejs");
 });
 
 app.get("/user", (req, res)=>{// gets all users
