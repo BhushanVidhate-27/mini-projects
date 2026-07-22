@@ -1,0 +1,119 @@
+<% layout("layouts/boilerplate") %>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <h3 class="mb-4">Create a New Listing</h3>
+
+            <form action="/listings" method="POST"
+             novalidate class="needs-validation" 
+            enctype="multipart/form-data"
+                >
+                <div class="mb-3">
+                    <label for="title" class="form-label" >Title</label>
+                    <input
+                        type="text"
+                        id="title"
+                        name="listing[title]"
+                        class="form-control"
+                        placeholder="Enter Title"
+                        required
+                    >
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Title is required</div>
+
+                </div>
+
+                <div class="mb-3 row">
+                    <div class="col-md-4">
+
+                    <label for="image" class="form-label" >Image URL</label>
+                    <input
+                        type="text"
+                        id="image"
+                        name="listing[image]"
+                        class="form-control"
+                        placeholder="Enter Image URL"
+                    >
+                    </div>
+                    <div class="col-md-8">
+                    <label for="image" class="form-label" >upload Image</label>
+                    <input
+                        type="file"
+                        id="image"
+                        name="listing[image]"
+                        class="form-control"
+                        placeholder="Enter Image URL"
+                    >
+                    </div>
+
+                    <div class="valid-feedback">Looks good!</div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label" >Description</label>
+                    <textarea
+                        id="description"
+                        name="listing[description]"
+                        class="form-control"
+                        rows="4"
+                        placeholder="Enter Description"
+                        required
+                    ></textarea>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">description is required</div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="price" class="form-label" >Price (₹)</label>
+                    <input
+                        id="price"
+                        name="listing[price]"
+                        class="form-control"
+                        placeholder="Enter Price"
+                        required
+                    >
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">price is required</div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="location" class="form-label" >Location</label>
+                    <input
+                        type="text"
+                        id="location"
+                        name="listing[location]"
+                        class="form-control"
+                        placeholder="Enter Location"
+                        required
+                    >
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">location is required</div>
+
+                </div>
+
+                <div class="mb-4">
+                    <label for="country" class="form-label" >Country</label>
+                    <input
+                        type="text"
+                        id="country"
+                        name="listing[country]"
+                        class="form-control"
+                        placeholder="Enter Country"
+                        required
+                    >
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">country is required</div>
+
+                </div>
+
+                <button type="submit" class="add-btn">
+                    Create Listing
+                </button>
+                <br><br><br><br>
+            </form>
+        </div>
+    </div>
+</div>

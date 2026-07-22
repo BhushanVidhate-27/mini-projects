@@ -1,0 +1,24 @@
+<% layout("layouts/boilerplate") %>
+<h2>all listings</h2>
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+    <% allListings.forEach(element=> { %>
+
+        <div class="listing-card col" style="width: 20rem;">
+            <a href="/listings/<%= element._id %>" class="card-link">
+                <img src="<%= element.image %>" class="card-img-top card-image" alt="listing_image" style="margin-top: 1rem;border-radius: 20px;" >
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-center" style="padding-top: 8rem;">
+                        <%= element.title %>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        <%= element.title %>
+                            <br><br>
+                            <%= element.price.toLocaleString("en-IN") %> / Night
+                    </p>
+                </div>
+            </a>
+        </div>
+    <% }) %>
+</div>

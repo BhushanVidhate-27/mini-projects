@@ -1,0 +1,95 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* navbar */
+.navbar {
+    height: 5rem;
+    background-color: #fff;
+
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222232 !important;
+}
+
+/* footer
+f-info,
+f-socials,
+f-tag,
+f-links */
+
+.f-info {
+    height: 8rem;
+    background: #6b6969;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-socials {
+    font-size: 1.3rem;
+}
+
+/* card */
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image {
+    height: 20rem;
+    width: 100% !important;
+    object-fit:cover;
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 1rem !important;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    background-color: #000000;
+    opacity: 0.06;
+}
+
+.card-link {
+    text-decoration: none;
+    color: black;
+}
+
+.card-body p {
+    font-weight: 600 !important;
+}
+
+.add-btn, .edit-btn {
+    border: none !important;
+    background: #fe424d !important;
+}
+
+/* show specific route */
+.show-img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 20px;
+}
