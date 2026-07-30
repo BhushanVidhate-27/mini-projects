@@ -29,7 +29,7 @@ case $choice in
         ;;
     4)
         PROJECT="wanderLust"
-        PORT=3000    # Change if your app uses another port
+        PORT=8080
         ;;
     *)
         echo "Invalid choice!"
